@@ -2562,7 +2562,7 @@ function scope(target: TargetElement, options: ParsedOptions, originalOptions: O
         // Convert the value to the slider stepping/range.
         scope_Values[handleNumber] = scope_Spectrum.fromStepping(to);
 
-        const translation = 10 * (transformDirection(to, 0) - scope_DirOffset);
+        const translation = 10 * (transformDirection(to, 0) /*- scope_DirOffset*/);
         const translateRule = "translate(" + inRuleOrder(translation + "%", "0") + ")";
 
         (scope_Handles[handleNumber].style as CSSStyleDeclarationIE10)[options.transformRule] = translateRule;
